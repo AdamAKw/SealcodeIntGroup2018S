@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+  $('html').addClass('js');
+  $(window).load(function() {
+      setTimeout(
+        function()
+        {
+            $("#loader-wrapper").fadeOut();
+        }, 3000);
+// to co jest zakomentowane służyło do testu, opuźnienie wrazie gdyby za szybko znikał loader
+  });
+  </script>
+  <title>zajęcia drugie</title>
+</head>
+<body>
+  <div id="loader-wrapper">
+      <div class="loader"></div>
+  </div>
+</body>
+</html>
