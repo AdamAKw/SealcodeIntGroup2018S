@@ -8,35 +8,62 @@
     <div id="root">
 
       <div id="topDiv">
-        <div id ="titleDiv"><h2>Organizer</h2></div>
-        <div id ="dateDiv">Data</div>
+        <div class="LeftDiv"><h2>Organizer</h2></div>
+        <div class="RightDiv"><p>20.03.2018r.<p></div>
       </div>
-      
+
       <div id="organizer">
-        <p>Add element:</p>
-        <form>
-          <input type="text"
+        <form class="CenterText">
+          <label for="adding">Add Task: </label>
+          <input type="text" id="adding" name="addingElement" placeholder="Task">
+          <button type="submit">Add</button>
         </form>
-          <div id="ToDo">
+          <div class="LeftDiv">
             <h3 class="headline">To Do:</h3>
-            <div class="checklist">
-              <input type="checkbox">task 1<br>
-              <input type="checkbox">task 2<br>
-              <input type="checkbox">taks 3<br>
+            <div>
+
+              <label class="container">Task One
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <button class="test">s</button>
+
+              <label class="container">Task Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="container">Task Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
             </div>
           </div>
 
-          <div id="Finished">
+          <div class="RightDiv">
             <h3 class="headline">Finished</h3>
-              <div class="checklist">
-                <input type="checkbox" checked>task 1<br>
-                <input type="checkbox" checked>task 2<br>
-                <input type="checkbox" checked>task 3<br>
+              <div class="DoneList">
+                <label class="container">Task One
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                </label>
+                <button class="test">s</button>
+
+                <label class="container">Task Two
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                </label>
+
+
+                <label class="container">Task Three
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                </label>
               </div>
           </div>
       </div>
 
-      <footer><p>Create by Adam Kwiatkowski for SealCode Web Project Classes.</p></footer>
+      <div id="footer"><p>Create by Adam Kwiatkowski for SealCode Web Project Classes.</p></div>
 
     </div>
   </body>
