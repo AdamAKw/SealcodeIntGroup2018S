@@ -82,6 +82,7 @@ button{
 /* The container */
 .container {
   display:table;
+  width: auto;
 /*  float:left;*/
     position: relative;
     padding-left: 22px;
@@ -142,5 +143,8 @@ button{
     transform: rotate(45deg);
 }
 .test{
+  width: 23%;
+  position: relative;
+  margin-right: 5px;
   float:right;
 }
