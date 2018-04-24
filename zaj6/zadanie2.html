@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+<head>
+<title>zadanie 2</title>
+<style>
+#kwadrat{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="kwadrat"></div>
+
+</body>
+<script>
+  var button = document.createElement("button");
+  button.addEventListener("click", zmianaKoloru);
+  button.innerHTML = "start"
+ document.body.appendChild(button)
+
+  button = document.createElement("button");
+ button.addEventListener("click", stopInteral);
+ button.innerHTML = "stop"
+document.body.appendChild(button)
+
+
+
+
+function stopInteral(){
+  clearInterval(myVar);
+}
+var myVar;
+function zmianaKoloru(){
+  myVar =   window.setInterval(function()
+                            {var x = document.getElementById("kwadrat")
+                            x.style.backgroundColor = randomColor()
+                            }, 1000)
+
+  }
+
+
+  function randomColor(){
+      var color = Math.floor(Math.random() * 16777216).toString(16);
+      return '#000000'.slice(0, -color.length) + color;
+  }
+</script>
+
+</html>

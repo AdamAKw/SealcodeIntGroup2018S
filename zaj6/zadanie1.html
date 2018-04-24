@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+<head>
+<title>zadanie 1</title>
+<style>
+#kwadrat{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="kwadrat"></div>
+
+</body>
+<script>
+  var button = document.createElement("button");
+  button.addEventListener("click", zmianaKoloru);
+  button.innerHTML = "button"
+ document.body.appendChild(button)
+
+  function zmianaKoloru(){
+    var x = document.getElementById("kwadrat")
+    x.style.backgroundColor = "yellow";
+  }
+</script>
+
+</html>
