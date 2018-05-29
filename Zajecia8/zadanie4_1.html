@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head><title>test</title>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <button type="submit" id="get">GET</button>
+<ul id="list"></ul>
+
+</body>
+<script>
+
+
+
+function set_data(_data){
+  var new_ul = document.getElementById("list")
+
+  var zmienna = _data
+  for (var zmienna1 of zmienna){
+    var new_li = document.createElement("li")
+    new_li.appendChild(document.createTextNode(zmienna1.user))
+    new_ul.appendChild(new_li)
+  }
+}
+
+axios
+  .get("http://vps487563.ovh.net:44444/api/v1/kwasy")
+  .then(function(response){
+    document.getElementById("get")
+            .addEventListener("click", function(){
+                                              set_data(response.data.data)
+                                              })
+  })
+  .catch(function (error) {
+      console.log(error);
+    });
+</script>
+</html>
